@@ -20,7 +20,7 @@ def create_id():
     url = data.get('url')
     pattern = re.compile("^[a-zA-Z0-9]*$")
 
-    if 'custom_id' not in data or data['custom_id'] == None:
+    if 'custom_id' not in data or data['custom_id'] is None:
         custom_id = get_unique_short_id()
 
     if custom_id and len(custom_id) > 16:
