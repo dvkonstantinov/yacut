@@ -122,6 +122,8 @@ def test_url_already_exists(client, short_python_url):
 def test_generated_unique_short_id(json_data, client):
     try:
         got = client.post('/api/id/', json=json_data)
+        print(111111111111111111111111111)
+        print(got)
     except Exception:
         raise AssertionError(
             'Для запроса, в котором short_id отсутствует или содержит пустую '
