@@ -1,0 +1,11 @@
+<div>
+  {{ form.csrf_token }}
+
+  {% for field in form %}
+    <div>
+      {{ field }}
+    </div>
+    {% include 'inc/forms/_form_field_errors.html' %}
+  {% endfor %}
+  <input type="submit" class="btn btn-primary" value="Создать">
+</div>
